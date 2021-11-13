@@ -10,6 +10,7 @@ const useFirebase = () => {
 const [user, setUser]= useState({});
 const [isLoading, setIsLoading] = useState(true);
 const [authError, setAuthError] = useState('');
+const [admin, setAdmin] = useState(false);
 
 const auth = getAuth();
 const googleProvider = new GoogleAuthProvider();
@@ -23,6 +24,8 @@ const registerUser =(email, password, name, history) =>{
    setAuthError('');
    const newUser = {email, displayName : name};
    setUser(newUser);
+  //  save user namwe to firebase
+  saveUser(email, name);
   // send user name to firebase after creation
   updateProfile(auth.currentUser, {
     displayName: name
@@ -59,9 +62,11 @@ const signInWithGoogle = (location,history) =>{
     setIsLoading(true);
     signInWithPopup(auth, googleProvider)
     .then((result) => {   
-      // const user = result.user;
-      setAuthError('');  
-    
+      const user = result.user;     
+     saveUserGoogle(user.email, user.displayName);
+     setAuthError(''); 
+     const userDestination = location?.state?.from || '/';
+     history.push(userDestination);
     }).catch((error) => {
         setAuthError(error.message);
     })
@@ -82,6 +87,12 @@ const signInWithGoogle = (location,history) =>{
       return () => unsubscribed;
 },[])
 
+// admin data load
+useEffect(()=>{
+ fetch(`http://localhost:5000/users/${user.email}`)
+ .then(res =>res.json())
+ .then(data =>setAdmin(data.admin))
+},[user.email])
 
 // user Logout process
 const logOut =() =>{
@@ -93,9 +104,34 @@ const logOut =() =>{
       })
       .finally(() => setIsLoading(false));
 }
+// save user info for database
+const saveUser = (email, displayName) =>{
+ const user = {email, displayName };
+ 
+ fetch('http://localhost:5000/users',{
+   method :'POST',
+   headers : {
+     'content-type' : 'application/json'
+   },
+   body : JSON.stringify(user)
+ })
+ .then()
+}
+// save google login user to db
+const saveUserGoogle = (email, displayName) =>{
+ const user = {email, displayName };
+ fetch('http://localhost:5000/users',{
+   method :'PUT',
+   headers : {
+     'content-type' : 'application/json'
+   },
+   body : JSON.stringify(user)
+ })
+ .then()
+}
 
     return {
-      user, registerUser,loginUser,signInWithGoogle,isLoading, authError, logOut
+      user,admin, registerUser,loginUser,signInWithGoogle,isLoading, authError, logOut
     }
 };
 
