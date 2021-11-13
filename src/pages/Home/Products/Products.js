@@ -16,7 +16,7 @@ useEffect(() =>{
           <h2>Diva EyeShadow Palette {products.length}</h2>
    <div className="row row-cols-1 row-cols-md-3 g-4 p-5">
        {
-           products.map(product =><Product key={product._id}
+           products.slice(0,6).map(product =><Product key={product._id}
            product={product}
            
            ></Product> )

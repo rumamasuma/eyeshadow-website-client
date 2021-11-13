@@ -21,6 +21,7 @@ const Orders = () => {
    // form submit
      const onSubmit = data =>{
     //  console.log(data);
+     data.status ="pending";
     fetch('http://localhost:5000/orders', {
       method :'POST',
       headers :{
@@ -55,7 +56,7 @@ const Orders = () => {
       </div>
 
   {/* customer form */}
-  <div className="col-md-6 order p-4">
+  <div className="col-md-6 order p-4 review">
   <h3 className='form-heading'> Customer Orders Form </h3>
 
   <form onSubmit={handleSubmit(onSubmit)}> 

@@ -17,16 +17,8 @@ const Header = () => {
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
       <Nav.Link   as={Link} to="/home" >Home</Nav.Link>
-      <Nav.Link as={Link} to="/about" >About us</Nav.Link>
-      <Nav.Link as={Link} to="/orders" >My Orders</Nav.Link>
-   
-   
-      {/* {
-        user?.email &&
-           <Nav.Link as={Link} to="/booking" > My Orders</Nav.Link>        
-      } */}
-        <Nav.Link as={Link} to="/addNewProducts" >Add New Products</Nav.Link>
-      
+      <Nav.Link as={Link} to="/explore" >Explore Products</Nav.Link>
+       
    {
      user?.email ?
      <div className= 'd-flex'>

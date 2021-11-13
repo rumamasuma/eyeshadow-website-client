@@ -18,7 +18,7 @@ useEffect(() =>{
 },[orders,user.email]);
 
 
-// delte order
+// delete order
 const handleDelete = id =>{
   const url = `http://localhost:5000/orders/${id}`;
   fetch(url,{
@@ -38,9 +38,9 @@ const handleDelete = id =>{
 
     return (
         <div id='myOrders'>
-            <h2>Your Orders {orders.length}</h2>
+            <h2>Your Order {filterOrder.length} Product</h2>
             <div>
-            <div className=' col-md-6'>
+            <div className=' col-md-10 col-sm-6'>
             <Table striped bordered hover size="sm">
   <thead>
     <tr>  
@@ -48,6 +48,7 @@ const handleDelete = id =>{
       <th>Email</th>
       <th> Ordered Products </th>
       <th> Confirm  Order/ Delete </th>
+      <th> Action </th>
     </tr>
   </thead>
   <tbody>
@@ -57,6 +58,7 @@ const handleDelete = id =>{
       <td>{user.email}</td>
       <td>{data.brandName}</td>
       <td><button onClick={()=>handleDelete(data._id)}>Delete</button></td>
+      <td>{data.status}</td>
     </tr>
    ) }
   

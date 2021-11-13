@@ -85,7 +85,7 @@ const signInWithGoogle = (location,history) =>{
         setIsLoading(false);
       });
       return () => unsubscribed;
-},[])
+},[auth])
 
 // admin data load
 useEffect(()=>{
