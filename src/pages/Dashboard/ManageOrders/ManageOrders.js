@@ -4,7 +4,7 @@ const ManageOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
 
 useEffect(()=>{
-    fetch('http://localhost:5000/orders')
+    fetch('https://radiant-brushlands-78511.herokuapp.com/orders')
     .then(res =>res.json())
     .then(data => {
         setAllOrders(data);

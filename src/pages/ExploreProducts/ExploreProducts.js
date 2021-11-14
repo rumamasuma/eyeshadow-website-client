@@ -6,7 +6,7 @@ const ExploreProducts = () => {
     const [products, setProducts] = useState([]);
 
 useEffect(() =>{
-    fetch('http://localhost:5000/products')
+    fetch('https://radiant-brushlands-78511.herokuapp.com/products')
     .then(res => res.json())
     .then(data => {
         setProducts(data);

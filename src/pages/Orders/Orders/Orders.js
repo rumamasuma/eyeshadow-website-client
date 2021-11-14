@@ -12,17 +12,17 @@ const Orders = () => {
 
 
     useEffect(() =>{
-    fetch(`http://localhost:5000/products/${productId}`)
+    fetch(`https://radiant-brushlands-78511.herokuapp.com/products/${productId}`)
     .then(res => res.json())
     .then(data => setOrderProduct(data));
-    },[])
+    },[productId])
 
      const { register, handleSubmit ,reset } = useForm();
    // form submit
      const onSubmit = data =>{
     //  console.log(data);
      data.status ="pending";
-    fetch('http://localhost:5000/orders', {
+    fetch('https://radiant-brushlands-78511.herokuapp.com/orders', {
       method :'POST',
       headers :{
         'content-type' : 'application/json'
@@ -42,7 +42,8 @@ const Orders = () => {
    return (
         <div>
             <Header></Header>
-            <div className="row g-4">
+              <div classname='container'>
+              <div className="row g-4">
      <div className="col-md-6 product p-4">
      <div className="card">
       <img src={orderProduct.img} className="card-img-top" alt="..."/>
@@ -56,7 +57,7 @@ const Orders = () => {
       </div>
 
   {/* customer form */}
-  <div className="col-md-6 order p-4 review">
+  <div className="col-md-6 order p-2 review border">
   <h3 className='form-heading'> Customer Orders Form </h3>
 
   <form onSubmit={handleSubmit(onSubmit)}> 
@@ -90,6 +91,7 @@ const Orders = () => {
   </form>
   </div> 
   </div>
+              </div>
  </div>
     );
 };

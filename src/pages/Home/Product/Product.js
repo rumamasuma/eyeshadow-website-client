@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Product.css';
+
+
 const Product = (props) => {
     const {_id,img, brandName, price, description} = props.product;
     return (
@@ -14,7 +16,7 @@ const Product = (props) => {
       </div>
       <div className="card-footer">
       <Link to ={`/products/${_id}`}>
-<button className=' btn btn-info rounded text-bold m-2'>Grab Now</button>
+<button  className=' btn btn-info rounded text-bold m-2'>Grab Now</button>
 </Link> 
       </div>
     </div>

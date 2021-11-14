@@ -89,7 +89,7 @@ const signInWithGoogle = (location,history) =>{
 
 // admin data load
 useEffect(()=>{
- fetch(`http://localhost:5000/users/${user.email}`)
+ fetch(`https://radiant-brushlands-78511.herokuapp.com/users/${user.email}`)
  .then(res =>res.json())
  .then(data =>setAdmin(data.admin))
 },[user.email])
@@ -108,7 +108,7 @@ const logOut =() =>{
 const saveUser = (email, displayName) =>{
  const user = {email, displayName };
  
- fetch('http://localhost:5000/users',{
+ fetch('https://radiant-brushlands-78511.herokuapp.com/users',{
    method :'POST',
    headers : {
      'content-type' : 'application/json'
@@ -120,7 +120,7 @@ const saveUser = (email, displayName) =>{
 // save google login user to db
 const saveUserGoogle = (email, displayName) =>{
  const user = {email, displayName };
- fetch('http://localhost:5000/users',{
+ fetch('https://radiant-brushlands-78511.herokuapp.com/users',{
    method :'PUT',
    headers : {
      'content-type' : 'application/json'

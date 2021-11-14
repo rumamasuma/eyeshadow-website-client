@@ -13,7 +13,7 @@ const Review = () => {
 
     const onSubmit = data => {
         console.log(data);
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://radiant-brushlands-78511.herokuapp.com/reviews', {
             method : "POST",
             headers : {
                 'content-type' : 'application/json'
