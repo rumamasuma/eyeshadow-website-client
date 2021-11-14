@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 
 const MyOrders = () => {
@@ -37,36 +36,35 @@ const handleDelete = id =>{
  
 
     return (
-        <div id='myOrders'>
-            <h2>Your Order {filterOrder.length} Product</h2>
-            <div>
-            <div className=' col-md-10 col-sm-6'>
-            <Table striped bordered hover size="sm">
+        <div className='m-5  p-5 '>
+            <h2 className='header'>You Order {filterOrder.length} Product</h2>
+            <div className='d-flex align-items-center justify-content-center'>
+            <div className=' col-md-12 col-sm-6 '>
+            <table class=" table-bordered table-striped table-hover ">
   <thead>
     <tr>  
-      <th>Customer Name</th>
-      <th>Email</th>
-      <th> Ordered Products </th>
-      <th>Order  Confirm  / Cancel </th>
-      <th> Action </th>
+      <th >Customer Name</th>
+      <th >Email</th>
+      <th >  Products </th>
+      <th >Order  Confirm  / Cancel </th>
+      <th > Status</th>
     </tr>
   </thead>
   <tbody>
   {  filterOrder.map (data =>  <tr key={data._id}>
-   
+       
       <td>{user.displayName}</td>
       <td>{user.email}</td>
       <td>{data.brandName}</td>
-      <td><button onClick={()=>handleDelete(data._id)}>Cancel</button></td>
+      <td><button onClick={()=>handleDelete(data._id)} className='btn-clr text-white'>Cancel</button></td>
       <td>{data.status}</td>
     </tr>
-   ) }
-  
+   ) }  
   </tbody>  
-</Table>
-            </div>
-            </div>
-        </div>
+</table>
+   </div>
+   </div>
+  </div>
     );
 };
 

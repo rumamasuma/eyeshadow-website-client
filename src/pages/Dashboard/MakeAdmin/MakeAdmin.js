@@ -32,18 +32,18 @@ const MakeAdmin = () => {
         })
     }
     return (
-       <div className='row d-flex align-items-center justify-content-center'>
-            <div className='border p-5 m-4 col-md-6 text-center review'>
+       <div className='row d-flex align-items-center justify-content-center '>
+            <div className='border p-5 m-5 col-md-6 text-center review'>
             <h2>Make  an Admin</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                <input {...register("email")} type="email" placeholder='Email'
-                onBlur={handleOnBlur}
-               />
-                <input   type="submit" />
+                onBlur={handleOnBlur} 
+                />
+                <input  type="submit" />
            </form>
            {successMsg && <div className="alert alert-success d-flex align-items-center" role="alert">
-                <div>Made Admin Successfully.</div>
-               </div> }
+             <div>Made Admin Successfully.</div>
+         </div> }
         </div>
        </div>
     );

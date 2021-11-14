@@ -4,6 +4,7 @@ import Header from '../../Home/Header/Header';
 import { useForm } from "react-hook-form";
 import './Orders.css';
 import useAuth from '../../../hooks/useAuth';
+import Footer from '../../Home/Footer/Footer';
 
 const Orders = () => {
      const {productId}= useParams();
@@ -43,10 +44,10 @@ const Orders = () => {
         <div>
             <Header></Header>
               <div classname='container'>
-              <div className="row g-4">
+              <div className="row g-4 m-3">
      <div className="col-md-6 product p-4">
      <div className="card">
-      <img src={orderProduct.img} className="card-img-top" alt="..."/>
+      <img src={orderProduct.img} className="card-img-top p-3" alt="..."/>
       <div className="card-body">
         <h4 className="card-title">{orderProduct.brandName}</h4>
         <h2 className="card-title">Only at {orderProduct.price}</h2>
@@ -57,8 +58,8 @@ const Orders = () => {
       </div>
 
   {/* customer form */}
-  <div className="col-md-5 order p-2 review border">
-  <h3 className=''> Customer Orders Form </h3>
+  <div className="col-md-5 order p-5 review border  m-3">
+  <h3 className='header'> Customer Orders Form </h3>
 
   <form onSubmit={handleSubmit(onSubmit)}> 
     <input {...register("name") }
@@ -94,6 +95,7 @@ const Orders = () => {
   </div> 
   </div>
   </div>
+  <Footer></Footer>
  </div>
     );
 };

@@ -30,11 +30,12 @@ const Review = () => {
 
     return (
         <div className='row d-flex align-items-center justify-content-center'>
-          <div className='border p-5 m-3 col-md-6 text-center review'>
+          <div className='border p-5 mt-5 col-md-8 col-sm-6 text-center review '>
           <h2>Please Review Our Products</h2>
         <p>You can write about products bad side also.We will try to improve our products quality.Thank you for purchasing !</p>
           <form onSubmit={handleSubmit(onSubmit)}>
       <input {...register("name")} defaultValue={user.displayName} />
+      <input {...register("email")} defaultValue={user.email} />
       <textarea {...register("review")} placeholder="Review" />
       <input type="number" {...register("rating", { min: 0, max: 5 })}  placeholder='Rating' />
       <input   type="submit" />

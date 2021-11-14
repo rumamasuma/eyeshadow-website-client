@@ -22,7 +22,7 @@ const AddProducts = () => {
     })
  }
     return (
-        <div className='review'>
+        <div className='review mt-5 p-5'>
             <h2>Add Products</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
       <input {...register("img") } placeholder='img url' />   

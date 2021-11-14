@@ -30,7 +30,7 @@ const handleDelete= id =>{
 }
 
     return (
-        <div className='review m-2'>
+        <div className='review mt-4 p-5'>
             <h2 >Manage All Products</h2>
             <div >
             <div className="row row-cols-1 row-cols-md-1 g-4 p-5">

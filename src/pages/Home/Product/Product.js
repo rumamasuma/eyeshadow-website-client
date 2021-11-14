@@ -16,7 +16,7 @@ const Product = (props) => {
       </div>
       <div className="card-footer">
       <Link to ={`/products/${_id}`}>
-<button  className=' btn btn-info rounded text-bold m-2'>Grab Now</button>
+<button  className='btn-clr  fw-bold m-2 text-white'>Grab Now</button>
 </Link> 
       </div>
     </div>
