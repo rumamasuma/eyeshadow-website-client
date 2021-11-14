@@ -28,7 +28,7 @@ const registerUser =(email, password, name, history) =>{
   saveUser(email, name);
   // send user name to firebase after creation
   updateProfile(auth.currentUser, {
-    displayName: name
+    displayName: name 
   }).then(() => {  
   }).catch((error) => {
   

@@ -1,6 +1,6 @@
 .dashboard {
     
-    height: 100vh;
+    /* height: 100vh; */
     color: white;
     cursor: pointer;
   }
@@ -10,4 +10,7 @@
   }
   .dashboard-menu:hover {
     color: cyan;
+  }
+  .nav-bg{
+    background-color: purple;
   }

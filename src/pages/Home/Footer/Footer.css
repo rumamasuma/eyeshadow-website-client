@@ -2,10 +2,21 @@
     background-color:rgb(82, 18, 82);
     height: 400px;
 }
-.icon {
-  color:cornflowerblue;
+.logo{
+  width: 100px;
 }
+.logo2{
+  width: 150px;
+}
+.footer-heading{
+  color:rgb(231, 137, 184);
+}
+/* .icon {
+  color:b
+} */
 .icon i {
-    font-size: 20px;
+  color: rgb(228, 217, 204);
+  font-size: large;
     padding-right: 10px;
+   
 }

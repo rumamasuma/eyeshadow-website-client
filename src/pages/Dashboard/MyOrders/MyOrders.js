@@ -28,7 +28,7 @@ const handleDelete = id =>{
   .then(data => {
     console.log(data);
     if(data.deletedCount){
-      alert('Order Deleted Successfully');
+      alert('Are you sure , to delete the order?');
         const remaining = filterOrder.filter(booking => booking._id !== id);
         setFilterOrder(remaining);
     }
@@ -47,7 +47,7 @@ const handleDelete = id =>{
       <th>Customer Name</th>
       <th>Email</th>
       <th> Ordered Products </th>
-      <th> Confirm  Order/ Delete </th>
+      <th>Order  Confirm  / Cancel </th>
       <th> Action </th>
     </tr>
   </thead>
@@ -57,7 +57,7 @@ const handleDelete = id =>{
       <td>{user.displayName}</td>
       <td>{user.email}</td>
       <td>{data.brandName}</td>
-      <td><button onClick={()=>handleDelete(data._id)}>Delete</button></td>
+      <td><button onClick={()=>handleDelete(data._id)}>Cancel</button></td>
       <td>{data.status}</td>
     </tr>
    ) }

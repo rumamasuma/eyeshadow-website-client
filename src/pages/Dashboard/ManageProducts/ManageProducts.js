@@ -21,7 +21,7 @@ const handleDelete= id =>{
     .then(data =>{
         // console.log(data);
         if(data.deletedCount){
-            alert('Deleted Order Successfully');
+            alert('Are you sure, You want to delete?');
             const remaining = products.filter(pd => pd._id !== id);
             setProducts(remaining);
         }
@@ -29,10 +29,9 @@ const handleDelete= id =>{
     })
 }
 
-
     return (
-        <div>
-            <h2>Manage All Products</h2>
+        <div className='review m-2'>
+            <h2 >Manage All Products</h2>
             <div >
             <div className="row row-cols-1 row-cols-md-1 g-4 p-5">
             {

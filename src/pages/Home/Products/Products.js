@@ -13,7 +13,7 @@ useEffect(() =>{
 },[])
     return (
         <div className="m-5">
-          <h2>Diva EyeShadow Palette Collection</h2>
+          <h2 className='header fst-italic'>Diva EyeShadow Palette Collection</h2>
    <div className="row row-cols-1 row-cols-md-3 g-4 p-5">
        {
            products.slice(0,6).map(product =><Product key={product._id}

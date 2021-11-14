@@ -57,8 +57,8 @@ const Orders = () => {
       </div>
 
   {/* customer form */}
-  <div className="col-md-6 order p-2 review border">
-  <h3 className='form-heading'> Customer Orders Form </h3>
+  <div className="col-md-5 order p-2 review border">
+  <h3 className=''> Customer Orders Form </h3>
 
   <form onSubmit={handleSubmit(onSubmit)}> 
     <input {...register("name") }
@@ -71,6 +71,8 @@ const Orders = () => {
 
      <input {...register("contact") } 
       placeholder='Contact Number' />
+     <input {...register("address") } 
+      placeholder='Address' />
 
       <input  {...register("brandName") } 
       defaultValue={orderProduct.brandName}   
@@ -87,11 +89,11 @@ const Orders = () => {
     defaultValue={productId} 
     placeholder='Product ID' />
 
-   <input type="submit" className='form-heading' />
+   <input type="submit" />
   </form>
   </div> 
   </div>
-              </div>
+  </div>
  </div>
     );
 };
