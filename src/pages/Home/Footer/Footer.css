@@ -1,6 +1,6 @@
-.footer{
+footer{
     background-color:rgb(82, 18, 82);
-    height: 400px;
+  
 }
 .logo{
   width: 100px;
@@ -9,11 +9,9 @@
   width: 150px;
 }
 .footer-heading{
-  color:rgb(231, 137, 184);
+  color:rgb(202, 173, 187);
 }
-/* .icon {
-  color:b
-} */
+
 .icon i {
   color: rgb(228, 217, 204);
   font-size: large;

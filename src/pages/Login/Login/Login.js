@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useLocation , useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import login from '../../../images/login.jpg';
-import Header from '../../Home/Header/Header';
+
 
 
 const Login = () => {
@@ -33,10 +33,9 @@ const handleGoogleSignIn =() =>{
 }
     return (
       
-     <div>
-           <Header></Header>
+             <div>
             <div className="container">        
-          <h2> Please Login For Orders</h2>
+          <h2 className='header p-4 '> Hello !! Welcome Back</h2>
           <div className="row ">             
               <div className="col-md-5 p-4">
 <form onSubmit={handleLoginSubmit}>
@@ -81,8 +80,8 @@ isLoading && <div className="spinner-border text-info" role="status">
    </div>
       
           <div className="col-md-5">
-                  <img src={login} alt="" />
-              </div>
+           <img src={login} alt="" />
+          </div>
           </div>
       </div>
      </div>

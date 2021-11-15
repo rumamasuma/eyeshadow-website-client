@@ -25,36 +25,36 @@ const Dashboard = () => {
       <div className="container-fluid">
      <h2 className="text-white">Dashboard</h2>
       <div className='d-flex'>
-    <Link to="/home"><Button  className='nav-bg m-2'>Home</Button></Link> 
-    <Button onClick={logOut}   className='nav-bg m-2'>LogOut</Button>
+    <Link to="/home"><Button  className='header-btn fw-bold m-2'>Home</Button></Link> 
+    <Button onClick={logOut}   className='header-btn fw-bold m-2'>LogOut</Button>
      </div>
   </div>
   </nav>
 
-    
       <div className='container'>
         <div className='row'>
          <div className= 'col-md-3 bg-white text-white dashboard border fixed '>
 
      <Link to={`${url}`}><Button  className='nav-bg m-3'>Dashboard</Button></Link>
   {
-     user?.email && 
+     user?.email && (!admin) &&
     <div className=' m-3'>
-     <Link to={`${url}/orders`} className='header m-3 p-3 fw-bold fs-5'>  My Orders   
+     <Link to={`${url}/orders`} className='dashboard-menu m-3 p-3 fw-bold fs-5'>  My Orders   
        </Link><br/>
- <Link to={`${url}/payOrder`} className='header m-3 p-3 fw-bold fs-5'>Online Payment</Link><br/>
- <Link to={`${url}/review`}className='header  p-3 fw-bold fs-5'>Review</Link>
+ <Link to={`${url}/payOrder`} className='dashboard-menu m-3 p-3 fw-bold fs-5'>Online Payment</Link><br/>
+ <Link to={`${url}/review`}className='dashboard-menu p-3 fw-bold fs-5'>Review</Link>
   </div>
 }
  {/* admin panel */}
 
 { admin && 
+
     <div>
-         <Link to={`${url}/makeAdmin`} className='header mb-3 p-3 fw-bold fs-5'>Make Admin
+         <Link to={`${url}/makeAdmin`} className='dashboard-menu mb-3 p-3 fw-bold fs-5'>Make Admin
          </Link><br/>
-          <Link to={`${url}/manageOrders`} className='header mb-3 p-3 fw-bold fs-5'>Manage All Orders</Link><br/>
-          <Link to={`${url}/manageProducts`} className='header mb-3 p-3 fw-bold fs-5'>Manage Products</Link><br/>
-          <Link to={`${url}/addProducts`} className='header mb-3 p-3 fw-bold fs-5'>Add Products</Link>
+          <Link to={`${url}/manageOrders`} className='dashboard-menu mb-3 p-3 fw-bold fs-5'>Manage All Orders</Link><br/>
+          <Link to={`${url}/manageProducts`} className='dashboard-menu mb-3 p-3 fw-bold fs-5'>Manage Products</Link><br/>
+          <Link to={`${url}/addProducts`} className='dashboard-menu mb-3 p-3 fw-bold fs-5'>Add Products</Link>
     </div>
 }
               </div>
@@ -94,5 +94,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-// (!admin) &&
+
 

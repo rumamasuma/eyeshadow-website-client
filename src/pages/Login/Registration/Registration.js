@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import login from '../../../images/login.jpg';
 import useAuth from '../../../hooks/useAuth';
-import Header from '../../Home/Header/Header';
+
 
 const Registration = () => {
     
@@ -31,11 +31,11 @@ const handleLoginSubmit = e =>{
 }
     return (
         <div>
-                  <Header></Header>
         <div className='container'>
-            <h3>Register For  Order Your Desire Product </h3>
-                 <div className="row ">             
-                <div className="col-md-5 p-4">
+            
+             <div className="row ">             
+              <div className="col-md-5 p-4">
+              <h3 className='header'>Create An Account </h3>
  {
      !isLoading && 
   <form onSubmit={handleLoginSubmit}>

@@ -45,7 +45,7 @@ const handleDelete= id =>{
                <h5 className="card-title">{product.brandName}</h5>
                  <h5 className="card-title"> Only at {product.price}</h5>
                  <p className="card-text">{product.description}</p>
-                 <button  onClick={() =>handleDelete(product._id)} className=' btn btn-info rounded text-bold m-2'>Delete Product</button>
+                 <button  onClick={() =>handleDelete(product._id)} className=' btn-clr rounded text-white  m-2'>Delete Product</button>
                </div>
                </div>
              </div>

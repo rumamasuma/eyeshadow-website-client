@@ -2,7 +2,7 @@ import React from 'react';
 import './Banner.css';
 import Carousel from 'react-bootstrap/Carousel';
 import banner from '../../../images/banner4.jpg';
-import banner1 from '../../../images/banner8.jpg';
+import banner1 from '../../../images/golden-smokey-make-up-for-women.jpg';
 import banner2 from '../../../images/banner.jpg';
 
 const Banner = () => {

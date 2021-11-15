@@ -3,6 +3,7 @@ import { Redirect, Route } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 
 const AdminRoute = ({ children, ...rest }) => {
+
     const {user ,admin,isLoading} = useAuth();
     if(isLoading){
         return <div class="spinner-border text-info" role="status">
@@ -18,7 +19,7 @@ const AdminRoute = ({ children, ...rest }) => {
           ) : (
             <Redirect
               to={{
-                pathname: "/",
+                pathname: "/dashboard",
                 state: { from: location }
               }}
             />

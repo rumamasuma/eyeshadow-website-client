@@ -39,10 +39,11 @@ const handleDelete = id =>{
         <div className='m-5  p-5 '>
             <h2 className='header'>You Order {filterOrder.length} Product</h2>
             <div className='d-flex align-items-center justify-content-center'>
-            <div className=' col-md-12 col-sm-6 '>
-            <table class=" table-bordered table-striped table-hover ">
+            <div className=' '>
+            <table class=" table responsive">
   <thead>
     <tr>  
+      <th>#</th>
       <th >Customer Name</th>
       <th >Email</th>
       <th >  Products </th>
@@ -51,8 +52,9 @@ const handleDelete = id =>{
     </tr>
   </thead>
   <tbody>
-  {  filterOrder.map (data =>  <tr key={data._id}>
+  {  filterOrder.map ((data, index )=>  <tr key={data._id}>
        
+      <td>{index}</td>
       <td>{user.displayName}</td>
       <td>{user.email}</td>
       <td>{data.brandName}</td>
