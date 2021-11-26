@@ -1,8 +1,18 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My website name Diva Eyeshadow Palette
+## Live site link https://diva-eyeshadow-palette.web.app/home
 
-## Available Scripts
+## About this website
+- Its A Eye Makeup Product Website
+- All new brands eyeshadow information will find in this side
+- A customer can order a product
+- See his/her own dashboard
+- Order list , online payment system also including
+- A customer can review in this page
+- Most important part is admin dashboard
+- An admin can control all products info like add a product, manage all products, all orders.
+- User friendly facility is including
 
 In the project directory, you can run:
 
