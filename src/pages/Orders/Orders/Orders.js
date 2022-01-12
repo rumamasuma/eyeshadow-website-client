@@ -23,6 +23,7 @@ const Orders = () => {
      const onSubmit = data =>{
     //  console.log(data);
      data.status ="pending";
+     
     fetch('https://radiant-brushlands-78511.herokuapp.com/orders', {
       method :'POST',
       headers :{

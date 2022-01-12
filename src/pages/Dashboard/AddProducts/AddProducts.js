@@ -36,8 +36,3 @@ const AddProducts = () => {
 };
 
 export default AddProducts;
-// .then(res => {
-        //    if(res.data.insertedId){
-        //        alert('Service Added Successfully.')
-        //        reset();
-        //    }
